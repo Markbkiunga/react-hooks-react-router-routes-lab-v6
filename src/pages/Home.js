@@ -9,7 +9,7 @@ function Home() {
       .then((moviesData) => setMovies(moviesData));
   }, []);
   const displayMovies = movies.map((movie) => {
-    return <MovieCard title={movie.title} time={movie.time} id={movie.id} />;
+    return <MovieCard key={movie.id} title={movie.title} id={movie.id} />;
   });
 
   return (
@@ -19,7 +19,7 @@ function Home() {
       </header>
       <main>
         <h1>Home Page</h1>
-        {displayMovies}
+        <>{displayMovies}</>
       </main>
     </>
   );

@@ -1,11 +1,13 @@
 import { Link } from 'react-router-dom';
 
-function MovieCard({ title, time, id }) {
+function MovieCard({ title, id }) {
   return (
-    <article key={id}>
-      <h1>{title}</h1>
-      <p>{time}</p>
-    </article>
+    <>
+      <h2>{title}</h2>
+      <button className="movie-button">
+        <Link to={`/movie/${id}`}>View Info</Link>
+      </button>
+    </>
   );
 }
 

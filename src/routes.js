@@ -2,6 +2,7 @@ import Home from './pages/Home';
 import Directors from './pages/Directors';
 import Actors from './pages/Actors';
 import Movie from './pages/Movie';
+import ErrorPage from './pages/ErrorPage';
 const routes = [
   {
     path: '/',
@@ -17,9 +18,12 @@ const routes = [
   },
   {
     path: '/movie/:id',
-  element: <Movie />,
-},
-
+    element: <Movie />,
+  },
+  {
+    path: '*',
+    element: <ErrorPage />,
+  },
 ];
 
 export default routes;
